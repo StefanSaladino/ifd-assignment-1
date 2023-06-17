@@ -336,7 +336,9 @@ aside a:active, .requirements a:active, .benefits a:active, .participation a:act
 
         background-color: rgba(169, 169, 169, 0.2);
 
-        height: 10vh;
+        height: auto;
+
+        padding: 3vh 0 3vh 0;
 
         width: 100vw;
     }
@@ -418,14 +420,5 @@ aside a:active, .requirements a:active, .benefits a:active, .participation a:act
         text-align: center;
 
     }
-
-
-
-
 }
-
-
-
-
-
-  
+ 
