@@ -421,6 +421,8 @@ aside a:active,
 
         font-size: .6rem;
 
+        overflow: hidden;
+
     }
 
     .wrapper {
