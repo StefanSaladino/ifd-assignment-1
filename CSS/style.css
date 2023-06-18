@@ -1,12 +1,14 @@
 html {
 
-margin: 0;
+    margin: 0 4vw;
+
+    background-color: rgba(169, 169, 169, 0.2);
 
 }
 
 .page-wrapper {
 
-    padding: 0 2vw 0 2vw;
+    padding: 0 2vw;
 
 }
 
@@ -16,7 +18,7 @@ margin: 0;
 
     position: relative;
 
-    margin: 0vh -2vw 0 -2vw;
+    margin: 0vh -6vw;
 
     height: auto;
 
@@ -30,6 +32,7 @@ margin: 0;
 
     color: white;
 
+
 }
 
 .intro p {
@@ -41,19 +44,19 @@ margin: 0;
 
 #fixed-img {
 
-    background-color: rgb(249, 248, 246);
+    background-color: rgba(169, 169, 169, 0.2);
 
     position: fixed;
 
     opacity: .4;
-    
+
     bottom: 13.75vh;
 
     left: 0;
 
-    height: 15vh;
+    height: auto;
 
-    width: 5vw;
+    width: 4vw;
 
     z-index: -1;
 
@@ -92,7 +95,8 @@ h2 {
 
 h3 {
 
-    font-family: 'Tilt Prism', cursive;;
+    font-family: 'Tilt Prism', cursive;
+    ;
 
     font-size: 1.5rem;
 
@@ -131,7 +135,7 @@ footer p {
 
     margin-right: 1vw;
 
-  }
+}
 
 .sidebar {
 
@@ -156,13 +160,13 @@ footer p {
     font-size: 1.2em;
 
 }
-  
+
 
 footer {
 
     display: sticky;
 
-    background-color: rgba(169, 169, 169, 0.8);
+    background-color: rgba(169, 169, 169, 1);
 
     height: 12vh;
 
@@ -176,9 +180,9 @@ footer {
 
     bottom: 0px;
 
-    margin: 0 -2vw;
+    margin: 0 -6vw;
 
-  }
+}
 
 footer div {
 
@@ -192,23 +196,33 @@ footer div {
 
 .sidebar a {
 
-    color:rgb(241, 146, 87)
-
+    color: rgb(241, 146, 87)
 }
 
-.requirements a, .benefits a, .participation a, .explanation a {
+.requirements a,
+.benefits a,
+.participation a,
+.explanation a {
 
     color: rgb(244, 23, 119);
 
 }
 
-aside a:visited, .requirements a:visited, .benefits a:visited, .participation a:visited, .explanation a:visited {
+aside a:visited,
+.requirements a:visited,
+.benefits a:visited,
+.participation a:visited,
+.explanation a:visited {
 
-    color:rgb(220, 156, 156);
+    color: rgb(220, 156, 156);
 
 }
 
-aside a:hover, .requirements a:hover, .benefits a:hover, .participation a:hover, .explanation a:hover {
+aside a:hover,
+.requirements a:hover,
+.benefits a:hover,
+.participation a:hover,
+.explanation a:hover {
 
     filter: blur(1px);
 
@@ -220,7 +234,11 @@ aside a:hover, .requirements a:hover, .benefits a:hover, .participation a:hover,
 
 }
 
-aside a:active, .requirements a:active, .benefits a:active, .participation a:active, .explanation a:active {
+aside a:active,
+.requirements a:active,
+.benefits a:active,
+.participation a:active,
+.explanation a:active {
 
     transition: font-size 0.3s ease;
 
@@ -250,7 +268,8 @@ aside a:active, .requirements a:active, .benefits a:active, .participation a:act
 
     font-weight: bold;
 
-    font-family: 'Kablammo', cursive;;
+    font-family: 'Kablammo', cursive;
+    ;
 
 }
 
@@ -320,8 +339,13 @@ aside a:active, .requirements a:active, .benefits a:active, .participation a:act
 
 @media(max-width:768px) {
 
-    
-    
+    .explanation, .participation, .benefits, .requirements {
+
+        margin: 0 4vw;
+        
+    }
+
+
     footer {
 
         display: none;
@@ -340,7 +364,7 @@ aside a:active, .requirements a:active, .benefits a:active, .participation a:act
 
         position: relative;
 
-        background-color: rgba(169, 169, 169, 0.2);
+        background-color: rgba(169, 169, 169, 1);
 
         height: auto;
 
@@ -369,33 +393,31 @@ aside a:active, .requirements a:active, .benefits a:active, .participation a:act
     #section-2 {
 
         width: 100%;
-    
+
         display: block;
-    
+
     }
 
     .sidebar {
 
-        width: 100%;
-    
+        width: auto;
+
         height: auto;
-    
+
         font-family: 'Roboto', sans-serif;
-    
-        padding: 1vw;
-    
+
         font-size: .8em;
 
         border: none;
 
-        margin: 0;
+        margin: 0 -6vw;
 
         padding: 2px;
 
         background-color: rgba(240, 255, 255, 0.5);
 
         font-size: .6rem;
-    
+
     }
 
     .wrapper {
@@ -406,7 +428,7 @@ aside a:active, .requirements a:active, .benefits a:active, .participation a:act
 
     }
 
-    .wrapper ul{
+    .wrapper ul {
 
         margin: 2vh 2vw;
 
@@ -432,5 +454,7 @@ aside a:active, .requirements a:active, .benefits a:active, .participation a:act
         display: none;
 
     }
+
+    
 
 }
