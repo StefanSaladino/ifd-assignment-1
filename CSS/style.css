@@ -1,24 +1,33 @@
+/*page will be sized by border box rules*/
+* {
+
+    box-sizing: border-box;
+
+    scrollbar-color: transparent transparent;
+
+}
+
+/*setting a margin for the page*/
 html {
 
-    margin: 0 4vw;
+    margin: 0;
 
     background-color: rgba(169, 169, 169, 0.2);
 
 }
 
-.page-wrapper {
-
-    padding: 0 2vw;
-
-}
-
+/*styling the introduction complete with background image*/
 .intro {
 
-    padding: 5px;
+    box-sizing: border-box;
+
+    padding: 5vh 5vw;
 
     position: relative;
 
-    margin: 0vh -6vw;
+    margin: 0;
+
+    max-width: 100%;
 
     height: auto;
 
@@ -35,13 +44,14 @@ html {
 
 }
 
+/*this is a descendant combinator*/
 .intro p {
 
     font-size: 1.2rem;
 
 }
 
-
+/*this is an id selector*/
 #fixed-img {
 
     background-color: rgba(169, 169, 169, 0);
@@ -50,7 +60,7 @@ html {
 
     opacity: .4;
 
-    bottom: 13.75vh;
+    bottom: 0;
 
     left: 0;
 
@@ -58,10 +68,11 @@ html {
 
     width: 4vw;
 
-    z-index: -1;
+    z-index: 1;
 
 }
 
+/*BG colour for the body*/
 #css-zen-garden {
 
     background-color: rgb(249, 248, 246);
@@ -70,7 +81,7 @@ html {
 
 }
 
-
+/*this is a type selector*/
 h1 {
 
     text-align: center;
@@ -83,6 +94,7 @@ h1 {
 
 }
 
+/*styling all h2's*/
 h2 {
 
     font-family: 'Tilt Prism', cursive;
@@ -96,19 +108,35 @@ h2 {
 h3 {
 
     font-family: 'Tilt Prism', cursive;
-    ;
 
-    font-size: 1.5rem;
+    font-size: 1.9rem;
 
 }
 
-p {
+h3 p {
 
     font-family: 'Roboto', sans-serif;
-    font-size: 1.25em;
+
 
 }
 
+/*this is a general sibling selector
+all p elements following a h3*/
+h3 ~ p {
+
+    font-weight: 502;
+
+}
+
+/*this is a direct sibling selector*/
+/*any p element following a h3*/
+.intro h3 + p {
+
+    color: rgb(250, 254, 241);
+    
+  }
+
+/*text in the footer*/
 footer p {
 
     font-size: 1em;
@@ -117,29 +145,33 @@ footer p {
 
 }
 
+/*page is not made to be scrollable horizontally*/
 #section-2 {
-
-    width: 100%;
 
     display: flex;
 
     flex-direction: row;
 
+    width: auto;
+
+    overflow-x: hidden;
+    
 }
 
+/*main text of the page*/
 .main-supporting {
 
-    width: 75%;
+    max-width: 70vw;
 
     font-size: .75rem;
 
-    margin-right: 1vw;
-
 }
 
+/*this is a class selector*/
+/*the aside is styled as a scrollable side bar window*/
 .sidebar {
 
-    width: 25%;
+    max-width: 22%;
 
     height: 100vh;
 
@@ -147,7 +179,7 @@ footer p {
 
     background-color: rgba(240, 255, 255, 0.5);
 
-    margin: 1vw 0 5vw 1vw;
+    margin: 1vw 0 0 4vw;
 
     font-family: 'Roboto', sans-serif;
 
@@ -161,26 +193,38 @@ footer p {
 
 }
 
+/*all text based classed of the main body*/
+.requirements,
+.benefits,
+.participation,
+.explanation {
 
+    padding: 2vh 2vw;
+
+    margin: 0 0 0 4vw;
+
+    font-size: .9rem;
+
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/*styling the footer*/
 footer {
-
-    display: sticky;
-
-    background-color: rgba(169, 169, 169, 1);
-
-    height: 12vh;
 
     width: 100vw;
 
+    background-color: rgba(169, 169, 169, 1);
+
+    height: auto;
+
     text-align: center;
 
-    padding: 2vh 0 0 0;
+    bottom: 0;
 
-    position: sticky;
+    padding: 2vh 8vw;
 
-    bottom: 0px;
-
-    margin: 0 -6vw;
+    margin: 0 auto;
 
 }
 
@@ -190,13 +234,17 @@ footer div {
 
     color: white;
 
-    padding-left: 5px;
 
 }
 
+/*the following stylistic choices are all for links
+they follow the link, visited, hover, active order for best practice
+links are styled uniquely according to their place on the page
+*/
 .sidebar a {
 
-    color: rgb(241, 146, 87)
+    color: rgb(241, 146, 87);
+
 }
 
 .requirements a,
@@ -248,7 +296,7 @@ aside a:active,
 
 .page-wrapper footer a {
 
-    padding: 5px;
+    padding: 2px;
 
     display: inline-block;
 
@@ -264,12 +312,11 @@ aside a:active,
 
     width: 10vw;
 
-    margin: 0 1.5vw;
+    margin: 0vw;
 
-    font-weight: bold;
+    font-weight: bolder;
 
-    font-family: 'Kablammo', cursive;
-    ;
+    font-family: 'Tilt Prism', cursive;
 
 }
 
@@ -293,6 +340,8 @@ aside a:active,
 
     width: 25vw;
 
+    color: red;
+
 }
 
 .page-wrapper footer a:active {
@@ -301,13 +350,15 @@ aside a:active,
 
 }
 
-.intro a {
+/*this is an attribute selector*/
+.intro a[href*="examples"] {
 
     color: rgb(115, 182, 218);
 
 }
 
-.intro a:visited {
+/*this is a child combinator*/
+.intro p > a:visited {
 
     color: blueviolet;
 
@@ -337,14 +388,34 @@ aside a:active,
 
 }
 
+/*Even though it wasn't explicitly stated to do so in the assignment, I wanted to take a run at a mobile design
+The following will take effect at a screen width of 768 px or less*/
+
 @media(max-width:768px) {
 
-    .explanation,
-    .participation,
-    .benefits,
-    .requirements {
+    * {
 
-        margin: 0 4vw;
+        box-sizing: border-box;
+        
+
+    }
+
+    html {
+
+        margin: 0;
+
+    }
+
+    .intro {
+
+
+        margin: 0;
+
+        width: 100vw;
+
+        font-size: .6rem;
+
+        overflow-x: hidden;
 
     }
 
@@ -355,17 +426,11 @@ aside a:active,
 
     }
 
-    .main-supporting {
-
-        width: 100%;
-
-    }
-
     #footer-responsive {
 
-        display: inline-block;
+        box-sizing: border-box;
 
-        position: relative;
+        display: inline-block;
 
         background-color: rgba(169, 169, 169, 1);
 
@@ -374,6 +439,14 @@ aside a:active,
         padding: 3vh 0 3vh 0;
 
         width: 100vw;
+
+        margin: 0;
+    }
+
+    #footer-responsive a {
+
+        margin: 0 2vw;
+
     }
 
     #footer-responsive img {
@@ -383,27 +456,53 @@ aside a:active,
         width: 4.5vw;
     }
 
-    #fixed-img {
+    #section-2 {
 
-        top: 0;
+        max-width: 100vw;
 
-        left: 0;
+        display: block;
 
-        width: 10vw;
+        margin: 0;
 
     }
 
-    #section-2 {
+    .requirements,
+    .benefits,
+    .participation,
+    .explanation {
 
-        width: 100%;
+        padding: 2vh 8vw;
 
-        display: block;
+        margin: 0 0 0 0;
+
+        width: 100vw;
+
+        text-align: center;
+
+        font-size: .85em;
+
+
+    }
+
+    .explanation,
+    .benefits {
+
+        background-color: white;
+
+    }
+
+    .requirements,
+    .participation {
+
+        background-color: rgba(0, 0, 0, 0.7);
+        
+        color: white;
 
     }
 
     .sidebar {
 
-        width: auto;
+        max-width: 100vw;
 
         height: auto;
 
@@ -413,7 +512,7 @@ aside a:active,
 
         border: none;
 
-        margin: 0 -6vw;
+        margin: 0;
 
         padding: 2px;
 
@@ -435,7 +534,7 @@ aside a:active,
 
     .wrapper ul {
 
-        margin: 2vh 2vw;
+        margin: 0;
 
     }
 
@@ -459,7 +558,4 @@ aside a:active,
         display: none;
 
     }
-
-
-
 }
